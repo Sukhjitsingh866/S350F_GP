@@ -8,14 +8,12 @@ import java.util.Scanner;
 
 public class LoginSystem {
     int pick=0;
-    private static List<User> users;
+    private static List<User> users = new ArrayList<>();
+
     
-    public LoginSystem(){
-        users = new ArrayList<>();
-    }
     
-    public void addUser(String hkid, String id){
-        users.add(new User(hkid,id));
+    public void addUser(String hkid, String id,Role role){
+        users.add(new User(hkid,id,role));
     }
     
     public void Login(){

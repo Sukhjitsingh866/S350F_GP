@@ -12,11 +12,22 @@ package groupproject;
 public class User {
     private String HKID;
     private String staffID;
+    private Role role;
     
-    public User(String hkid, String id){
+    public User(String hkid, String id, Role role){
         this.HKID = hkid;
         this.staffID = id;
+        this.role = role;
     }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+    
 
     public String getHKID() {
         return HKID;
