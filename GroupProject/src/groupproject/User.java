@@ -5,6 +5,9 @@
  */
 package groupproject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Owner
@@ -13,6 +16,8 @@ public class User {
     private String HKID;
     private String staffID;
     private Role role;
+    
+    public static List<User> users = new ArrayList<>();
     
     public User(String hkid, String id, Role role){
         this.HKID = hkid;
@@ -45,5 +50,14 @@ public class User {
         this.staffID = staffID;
     }
     
+    
+    public static User findUserByHKIDAndID(String hkid,String id){
+        for (User each:users){
+            if(each.getHKID().equals(hkid)&&each.getStaffID().equals(id)){
+                return each;
+            }
+        }
+        return null;
+    }
     
 }

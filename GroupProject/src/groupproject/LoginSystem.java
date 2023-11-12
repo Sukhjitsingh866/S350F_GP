@@ -8,12 +8,12 @@ import java.util.Scanner;
 
 public class LoginSystem {
     int pick=0;
-    private static List<User> users = new ArrayList<>();
+    
 
     
     
     public void addUser(String hkid, String id,Role role){
-        users.add(new User(hkid,id,role));
+        User.users.add(new User(hkid,id,role));
     }
     
     public void Login(){
@@ -23,7 +23,7 @@ public class LoginSystem {
         System.out.println("Enter your Staff/Student ID\n");
         String id = sc.nextLine();
         boolean isCorrect = false;
-        for (User each: users) {
+        for (User each: User.users) {
             if (each.getHKID().equals(hkid) && each.getStaffID().equals(id)){
                 isCorrect = true;
                 break;
