@@ -34,7 +34,8 @@ public class LoginSystem {
             System.out.println("Login successful!");
             switch (pick) {
                 case 1:
-                    Staff staff = new Staff();
+                        Admin admin = new Admin();
+                        admin.main(null);
                         break;
                 case 2:
                     Teacher teacher = new Teacher();
@@ -55,7 +56,7 @@ public class LoginSystem {
     public void pickRole(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose a role:");
-        System.out.println("1. Staff");
+        System.out.println("1. Admin");
         System.out.println("2. Teacher");
         System.out.println("3. Student");
         System.out.println("Insert your Role: ");
@@ -63,7 +64,7 @@ public class LoginSystem {
         
         switch(pick){
             case 1:
-                System.out.println("Code for Staff");
+                System.out.println("Code for Admin");
                 Login();
                 break;
             case 2:

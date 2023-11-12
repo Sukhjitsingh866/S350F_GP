@@ -9,6 +9,12 @@ package groupproject;
  *
  * @author Owner
  */
-public class Staff {
+public class Admin {
     
+    
+    
+    
+    public static void main(String [] args){
+        System.out.println("Started shit for admin!");
+    }
 }
