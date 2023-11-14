@@ -35,7 +35,7 @@ public class LoginSystem {
             switch (pick) {
                 case 1:
                         Admin admin = new Admin();
-                        admin.main(null);
+                        admin.assignRole();
                         break;
                 case 2:
                     Teacher teacher = new Teacher();
