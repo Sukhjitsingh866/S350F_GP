@@ -9,14 +9,11 @@ import java.util.Scanner;
 public class LoginSystem {
     int pick=0;
     
-
     
     
-    public void addUser(String hkid, String id,Role role){
-        User.users.add(new User(hkid,id,role));
-    }
     
     public void Login(){
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your HKID (without brackets)\n");
         String hkid = sc.nextLine();
@@ -81,8 +78,6 @@ public class LoginSystem {
         sc.close();
     }
     
-    public static void main(String[] args){
-        
-    }
+
     
 }

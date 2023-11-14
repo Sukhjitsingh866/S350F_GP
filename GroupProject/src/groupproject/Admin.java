@@ -15,8 +15,8 @@ public class Admin {
     
     public void assignRole(){
         System.out.println("Please select Option:");
-        System.out.println("1 for Existing User");
-        System.out.println("2 for New User");
+        System.out.println("1 for change role of Existing User");
+        System.out.println("2 for Adding New User");
         Scanner sc = new Scanner(System.in);
         int pick = sc.nextInt();
         switch(pick){
@@ -68,11 +68,12 @@ public class Admin {
         role = role.toUpperCase();
         User newuser = new User(hkid,id,Role.valueOf(role));
         User.users.add(newuser);
+        System.out.println("Add new User:");
+        System.out.println("HKID of New User: "+ newuser.getHKID());
+        System.out.println("Student ID of New User: "+ newuser.getStaffID());
+        System.out.println("Role of New User: "+ newuser.getRole());
     }
     
     
-    public static void main(String [] args){
-        Admin admin = new Admin();
-        admin.assignRole();
-    }
+
 }
