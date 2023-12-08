@@ -1,22 +1,19 @@
 
 package groupproject;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 
 public class LoginSystem {
     int pick=0;
-    
-    
-    
+    public static String hkid;
+
     
     public void Login(){
         
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your HKID (without brackets)\n");
-        String hkid = sc.nextLine();
+        hkid = sc.nextLine();
         System.out.println("Enter your Staff/Student ID\n");
         String id = sc.nextLine();
         boolean isCorrect = false;
@@ -36,9 +33,11 @@ public class LoginSystem {
                         break;
                 case 2:
                     Teacher teacher = new Teacher();
+                    teacher.teacher();
                     break;
                 case 3:
-                    Student student = new Student();
+                    Student student = new Student(hkid);
+                    student.viewStudent();
                     break;
                 default:
                     System.out.println("Invalid role.");
